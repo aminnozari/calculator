@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Calculator,cal">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Amin Calculator</title>
+        <link rel="shortcut icon" href="icons8-calculator-48.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+                <div class="display">
+                    <input name="display" type="text" id="display" placeholder="0" readonly>
+                </div>
+                <div class="cal_table">
+                    <div class="value"><button class="active" id="seven">7</button></div>
+                    
+                    <div class="value"><button id="eight">8</button></div>
+                    
+                    <div class="value"><button id="nine">9</button></div>
+                    
+                    <div class="value"><button id="plus">+</button></div>
+                </div>
+                <div class="cal_table">
+                    <div class="value"><button id="four">4</button></div>
+                    
+                    <div class="value"><button id="five">5</button></div>
+                    
+                    <div class="value"><button id="six">6</button></div>
+                    
+                    <div class="value"><button id="mines">-</button></div>
+                </div><div class="cal_table">
+                    <div class="value"><button id="one">1</button></div>
+                    
+                    <div class="value"><button id="two">2</button></div>
+                    
+                    <div class="value"><button id="three">3</button></div>
+                    
+                    <div class="value"><button id="multiply">x</button></div>
+                </div>
+                <div class="cal_table">
+                    <div class="value"><button id="C">C</button></div>
+                    
+                    <div class="value"><button id="zero">0</button></div>
+                    
+                    <div class="value"><button id="equal">=</button></div>
+                    
+                    <div class="value"><button id="division">/</button></div>
+                </div>
+        </div>
+        <script>
+            var display = document.getElementById("display");
+            var zero = document.getElementById("zero");
+            var one = document.getElementById("one");
+            var two = document.getElementById("two");
+            var three = document.getElementById("three");
+            var four = document.getElementById("four");
+            var five = document.getElementById("five");
+            var six = document.getElementById("six");
+            var seven = document.getElementById("seven");
+            var eight = document.getElementById("eight");
+            var nine = document.getElementById("nine");
+            var plus = document.getElementById("plus");
+            var mines = document.getElementById("mines");
+            var multiply = document.getElementById("multiply");
+            var division = document.getElementById("division");
+            var C = document.getElementById("C");
+            var temp_value_one;
+            var temp_value_two;
+            var temp_function;
+            zero.onclick=function()
+            {
+                display.value += 0;
+            }
+            one.onclick=function()
+            {
+                display.value += 1;
+            }
+            two.onclick=function()
+            {
+                display.value += 2;
+            }
+            three.onclick=function()
+            {
+                display.value += 3;
+            }
+            four.onclick=function()
+            {
+                display.value += 4;
+            }
+            five.onclick=function()
+            {
+                display.value += 5;
+            }
+            six.onclick=function()
+            {
+                display.value += 6;
+            }
+            seven.onclick=function()
+            {
+                display.value += 7;
+            }
+            eight.onclick=function()
+            {
+                display.value += 8;
+            }
+            nine.onclick=function()
+            {
+                display.value += 9;
+            }
+            C.onclick=function()
+            {
+                display.value="";
+            }
+            plus.onclick=function()
+            {
+                temp_value_one = display.value;
+                display.value="";
+                temp_function = 1;
+            }
+            mines.onclick=function()
+            {
+                temp_value_one = display.value;
+                display.value="";
+                temp_function = 2;
+            }
+            multiply.onclick=function()
+            {
+                temp_value_one = display.value;
+                display.value="";
+                temp_function = 3;
+            }
+            division.onclick=function()
+            {
+                temp_value_one = display.value;
+                display.value="";
+                temp_function = 4;
+            }
+            equal.onclick=function()
+            {
+                if (temp_function == 1){
+                    display.value = parseInt(temp_value_one) + parseInt(display.value);
+                }
+                if (temp_function == 2){
+                    display.value = parseInt(temp_value_one) - parseInt(display.value);
+                }
+                if (temp_function == 3){
+                    display.value = parseInt(temp_value_one) * parseInt(display.value);
+                }
+                if (temp_function == 4){
+                    display.value = parseInt(temp_value_one) / parseInt(display.value);
+                }
+            }
+        </script>
+    </body>

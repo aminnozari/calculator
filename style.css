@@ -1,0 +1,64 @@
+body
+{
+    background-color: rgb(196, 191, 191);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+.container
+{
+    width: 250px;
+    height: 400px;
+    margin: 80px auto;
+    background: rgba(238, 252, 242, 0.541);
+    box-shadow: 5px 5px 10px #444440,-5px -5px 10px #eaebe8; 
+    border-radius: 10px;  
+    position: relative;
+    display: grid;
+}
+.cal_table
+{
+    width: 20px;
+    margin: 20px auto;
+    position: relative;
+    display: grid;
+    
+}
+#display
+{
+    border: none;
+    outline: none;
+    color: black;
+    text-align: right;
+    font-weight: 600px;
+    padding: 15px;
+    margin: 30px;
+    background: transparent;
+    box-shadow: inset 2px 2px 5px #eaebe8, -2px -2px 5px #444440;
+}
+.cal_table{
+    flex-direction: row;
+    position: relative;
+    display: flex;
+    top: -40px;
+    margin: 15px 0px 0px 5px;
+    right: -18px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    height: 25px;
+}
+.value
+{
+    padding: 3px;
+    margin: 3px;
+}
+#seven , #eight , #nine , #plus , #four, #five, #six, #mines, #one, #two, #three, #multiply, #C, #zero, #equal, #division
+{
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    background: #ddddd8;
+    box-shadow: 5px 5px 10px #757572 -5px -5px -10px #757572 ;
+}
